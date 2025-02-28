@@ -2,7 +2,7 @@ import telebot
 import requests
 
 # Replace with your Telegram bot token
-BOT_TOKEN = "7613718217:AAF0-eF30Coi4cl_U4fhsYvI7s7ezMZ29ks"
+BOT_TOKEN = "7778117419:AAFsuHDo3XTSxOHFSeAWjtD-NZk7qN7LqHo"
 
 # Initialize the bot
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -12,7 +12,7 @@ def send_likes(uid):
     url = "https://ff-community-api.vercel.app/sendLikes"
     params = {
         "uid": uid,
-        "access_key": "55sub"
+        "access_key": "lufzywork"
     }
     response = requests.get(url, params=params)
     
@@ -24,7 +24,7 @@ def send_likes(uid):
 # Command to start the bot
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "Send a Free Fire UID to send likes.\nExample: `12345678`", parse_mode="Markdown")
+    bot.reply_to(message, "Kirim UID EpEp Kalian untuk mengirim like.\nExample: `12345678`", parse_mode="Markdown")
 
 # Handling user messages (UID input)
 @bot.message_handler(func=lambda message: message.text.isdigit())
